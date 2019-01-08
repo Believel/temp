@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>scroll</title>
+    <style>
+        #test {
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid black;
+            overflow: scroll;
+            font-size: 20px;
+            line-height: 200px;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            let oTest = document.getElementById('test')
+            let oBtn = document.getElementById('btn')
+            oBtn.onclick = function() {
+                console.log('scrollTop:'+oTest.scrollTop)
+                console.log('scrollHeight:'+oTest.scrollHeight)
+                console.log('clientHeight:'+oTest.clientHeight)
+            }
+
+        }
+    </script>
 </head>
 <body>
-    显示出来内容的
+    <div id="test">
+        内容<br>
+        内容<br>
+    </div>
+    <button id="btn">点击</button>
 </body>
 </html>
