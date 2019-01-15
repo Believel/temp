@@ -36,7 +36,7 @@ server.keys = config.secret_key
 server.use(session({}, server))
 // ejs
 ejs(server, {
-    root: pathlib.resolve('templae'),
+    root: pathlib.resolve('template'),
     layout: false,
     viewExt: '.ejs.html',
     cache: false,
